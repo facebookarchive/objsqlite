@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA747D9F0F9514B9006C5449 /* ObjSqlite_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ObjSqlite_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		EB231F4410924EC4009087CD /* ObjSqliteTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB231F3E10924EB1009087CD /* ObjSqliteTest.m */; };
+		EB231F4B10924F2A009087CD /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB231F4A10924F2A009087CD /* libsqlite3.0.dylib */; };
+		EB953B8A1093088C0037F4B8 /* README in Resources */ = {isa = PBXBuildFile; fileRef = EB953B891093088C0037F4B8 /* README */; };
+		EB953C2C109626580037F4B8 /* ObjSqliteDB.m in Sources */ = {isa = PBXBuildFile; fileRef = EB953C2A109626580037F4B8 /* ObjSqliteDB.m */; };
+		EB953C2D109626580037F4B8 /* ObjSqliteStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EB953C2B109626580037F4B8 /* ObjSqliteStatement.m */; };
+		EB953C74109628070037F4B8 /* ObjSqliteDB.m in Sources */ = {isa = PBXBuildFile; fileRef = EB953C2A109626580037F4B8 /* ObjSqliteDB.m */; };
+		EB953C75109628070037F4B8 /* ObjSqliteStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EB953C2B109626580037F4B8 /* ObjSqliteStatement.m */; };
+		EB953C761096280C0037F4B8 /* ObjSqliteDB.h in Headers */ = {isa = PBXBuildFile; fileRef = EB953C2E1096265E0037F4B8 /* ObjSqliteDB.h */; };
+		EB953C771096280C0037F4B8 /* ObjSqliteStatement.h in Headers */ = {isa = PBXBuildFile; fileRef = EB953C2F1096265E0037F4B8 /* ObjSqliteStatement.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA747D9E0F9514B9006C5449 /* ObjSqlite_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjSqlite_Prefix.pch; sourceTree = "<group>"; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libObjSqlite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libObjSqlite.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB231F2F10924E88009087CD /* ObjSqliteTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjSqliteTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB231F3010924E88009087CD /* ObjSqliteTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObjSqliteTest-Info.plist"; sourceTree = "<group>"; };
+		EB231F3D10924EB1009087CD /* ObjSqliteTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjSqliteTest.h; sourceTree = "<group>"; };
+		EB231F3E10924EB1009087CD /* ObjSqliteTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjSqliteTest.m; sourceTree = "<group>"; };
+		EB231F4A10924F2A009087CD /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		EB953B891093088C0037F4B8 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README; path = ../README; sourceTree = SOURCE_ROOT; };
+		EB953C2A109626580037F4B8 /* ObjSqliteDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjSqliteDB.m; sourceTree = "<group>"; };
+		EB953C2B109626580037F4B8 /* ObjSqliteStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjSqliteStatement.m; sourceTree = "<group>"; };
+		EB953C2E1096265E0037F4B8 /* ObjSqliteDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjSqliteDB.h; path = ObjSqlite/ObjSqliteDB.h; sourceTree = "<group>"; };
+		EB953C2F1096265E0037F4B8 /* ObjSqliteStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjSqliteStatement.h; path = ObjSqlite/ObjSqliteStatement.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB231F2C10924E88009087CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB231F4B10924F2A009087CD /* libsqlite3.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libObjSqlite.a */,
+				EB231F2F10924E88009087CD /* ObjSqliteTest.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* ObjSqlite */ = {
+			isa = PBXGroup;
+			children = (
+				EB953B891093088C0037F4B8 /* README */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				EB231F3810924EAA009087CD /* Tests */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = ObjSqlite;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB231F4A10924F2A009087CD /* libsqlite3.0.dylib */,
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EB953C2E1096265E0037F4B8 /* ObjSqliteDB.h */,
+				EB953C2A109626580037F4B8 /* ObjSqliteDB.m */,
+				EB953C2F1096265E0037F4B8 /* ObjSqliteStatement.h */,
+				EB953C2B109626580037F4B8 /* ObjSqliteStatement.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EB231F3010924E88009087CD /* ObjSqliteTest-Info.plist */,
+				AA747D9E0F9514B9006C5449 /* ObjSqlite_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		EB231F3810924EAA009087CD /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EB231F3D10924EB1009087CD /* ObjSqliteTest.h */,
+				EB231F3E10924EB1009087CD /* ObjSqliteTest.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB953C761096280C0037F4B8 /* ObjSqliteDB.h in Headers */,
+				EB953C771096280C0037F4B8 /* ObjSqliteStatement.h in Headers */,
+				AA747D9F0F9514B9006C5449 /* ObjSqlite_Prefix.pch in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* ObjSqlite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ObjSqlite" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObjSqlite;
+			productName = ObjSqlite;
+			productReference = D2AAC07E0554694100DB518D /* libObjSqlite.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EB231F2E10924E88009087CD /* ObjSqliteTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB231F3410924E89009087CD /* Build configuration list for PBXNativeTarget "ObjSqliteTest" */;
+			buildPhases = (
+				EB231F2A10924E88009087CD /* Resources */,
+				EB231F2B10924E88009087CD /* Sources */,
+				EB231F2C10924E88009087CD /* Frameworks */,
+				EB231F2D10924E88009087CD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObjSqliteTest;
+			productName = ObjSqliteTest;
+			productReference = EB231F2F10924E88009087CD /* ObjSqliteTest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ObjSqlite" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* ObjSqlite */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* ObjSqlite */,
+				EB231F2E10924E88009087CD /* ObjSqliteTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB231F2A10924E88009087CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB953B8A1093088C0037F4B8 /* README in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EB231F2D10924E88009087CD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB953C74109628070037F4B8 /* ObjSqliteDB.m in Sources */,
+				EB953C75109628070037F4B8 /* ObjSqliteStatement.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB231F2B10924E88009087CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB231F4410924EC4009087CD /* ObjSqliteTest.m in Sources */,
+				EB953C2C109626580037F4B8 /* ObjSqliteDB.m in Sources */,
+				EB953C2D109626580037F4B8 /* ObjSqliteStatement.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/ObjSqlite.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ObjSqlite_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = ObjSqlite;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				DSTROOT = /tmp/ObjSqlite.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ObjSqlite_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = ObjSqlite;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2.1;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos2.2.1;
+			};
+			name = Release;
+		};
+		EB231F3210924E89009087CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ObjSqlite_Prefix.pch;
+				INFOPLIST_FILE = "ObjSqliteTest-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = ObjSqliteTest;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		EB231F3310924E89009087CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ObjSqlite_Prefix.pch;
+				INFOPLIST_FILE = "ObjSqliteTest-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = ObjSqliteTest;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ObjSqlite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ObjSqlite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB231F3410924E89009087CD /* Build configuration list for PBXNativeTarget "ObjSqliteTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB231F3210924E89009087CD /* Debug */,
+				EB231F3310924E89009087CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

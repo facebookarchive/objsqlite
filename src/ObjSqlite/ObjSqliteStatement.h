@@ -34,7 +34,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // db is a weak pointer.
-- (id) initWithSQL:(const char*)sql andDB:(ObjSqliteDB*)db;
+- (id) initWithSQL:(const char*)sql db:(ObjSqliteDB*)db;
 
 
 // Binding

@@ -91,7 +91,7 @@ static const char* kTestSelectValueDB = "SELECT value FROM test WHERE id = ?;";
 
   ObjSqliteStatement* statement;
 
-  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestInsertDB andDB:db];
+  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestInsertDB db:db];
   STAssertTrue([statement step], @"Failed statement: %@", db.lastErrorMessage);
   [statement release];
   statement = nil;
@@ -108,14 +108,14 @@ static const char* kTestSelectValueDB = "SELECT value FROM test WHERE id = ?;";
 
   ObjSqliteStatement* statement;
 
-  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestInsertValueDB andDB:db];
+  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestInsertValueDB db:db];
   [statement bindInt:1 toColumn:1];
   [statement bindInt:1001 toColumn:2];
   STAssertTrue([statement step], @"Failed statement: %@", db.lastErrorMessage);
   [statement release];
   statement = nil;
 
-  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestSelectValueDB andDB:db];
+  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestSelectValueDB db:db];
   [statement bindInt:1 toColumn:1];
   STAssertTrue([statement step], @"Failed statement: %@", db.lastErrorMessage);
   STAssertEquals([statement intFromColumn:0], 1001, @"Failed statement: %@", db.lastErrorMessage);
@@ -134,12 +134,12 @@ static const char* kTestSelectValueDB = "SELECT value FROM test WHERE id = ?;";
 
   ObjSqliteStatement* statement;
 
-  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestInsertDB andDB:db];
+  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestInsertDB db:db];
   STAssertTrue([statement step], @"Failed statement: %@", db.lastErrorMessage);
   [statement release];
   statement = nil;
 
-  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestSelectDB andDB:db];
+  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestSelectDB db:db];
   STAssertTrue([statement step], @"Failed statement: %@", db.lastErrorMessage);
   STAssertEquals([statement intFromColumn:0], 1001, @"Failed statement: %@", db.lastErrorMessage);
   [statement release];
@@ -157,12 +157,12 @@ static const char* kTestSelectValueDB = "SELECT value FROM test WHERE id = ?;";
 
   ObjSqliteStatement* statement;
 
-  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestInsertDB andDB:db];
+  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestInsertDB db:db];
   STAssertTrue([statement step], @"Failed statement: %@", db.lastErrorMessage);
   [statement release];
   statement = nil;
 
-  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestDeleteDB andDB:db];
+  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestDeleteDB db:db];
   STAssertTrue([statement step], @"Failed statement: %@", db.lastErrorMessage);
   [statement release];
   statement = nil;

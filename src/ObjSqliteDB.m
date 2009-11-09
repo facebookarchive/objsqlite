@@ -93,7 +93,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)setCreateSQL:(const char*)sql {
   [_createStatement release];
-  _createStatement = [[ObjSqliteStatement alloc] initWithSQL:sql andDB:self];
+  _createStatement = [[ObjSqliteStatement alloc] initWithSQL:sql db:self];
 }
 
 

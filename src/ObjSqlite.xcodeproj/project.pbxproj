@@ -11,13 +11,14 @@
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		EB231F4410924EC4009087CD /* ObjSqliteTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EB231F3E10924EB1009087CD /* ObjSqliteTest.m */; };
 		EB231F4B10924F2A009087CD /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB231F4A10924F2A009087CD /* libsqlite3.0.dylib */; };
-		EB953B8A1093088C0037F4B8 /* README in Resources */ = {isa = PBXBuildFile; fileRef = EB953B891093088C0037F4B8 /* README */; };
 		EB953C2C109626580037F4B8 /* ObjSqliteDB.m in Sources */ = {isa = PBXBuildFile; fileRef = EB953C2A109626580037F4B8 /* ObjSqliteDB.m */; };
 		EB953C2D109626580037F4B8 /* ObjSqliteStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EB953C2B109626580037F4B8 /* ObjSqliteStatement.m */; };
 		EB953C74109628070037F4B8 /* ObjSqliteDB.m in Sources */ = {isa = PBXBuildFile; fileRef = EB953C2A109626580037F4B8 /* ObjSqliteDB.m */; };
 		EB953C75109628070037F4B8 /* ObjSqliteStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = EB953C2B109626580037F4B8 /* ObjSqliteStatement.m */; };
 		EB953C761096280C0037F4B8 /* ObjSqliteDB.h in Headers */ = {isa = PBXBuildFile; fileRef = EB953C2E1096265E0037F4B8 /* ObjSqliteDB.h */; };
 		EB953C771096280C0037F4B8 /* ObjSqliteStatement.h in Headers */ = {isa = PBXBuildFile; fileRef = EB953C2F1096265E0037F4B8 /* ObjSqliteStatement.h */; };
+		EBE731E910A894E400E43DD0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EBE731E810A894E400E43DD0 /* README.md */; };
+		EBE731EB10A8950B00E43DD0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EBE731EA10A8950B00E43DD0 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +30,12 @@
 		EB231F3D10924EB1009087CD /* ObjSqliteTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjSqliteTest.h; sourceTree = "<group>"; };
 		EB231F3E10924EB1009087CD /* ObjSqliteTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjSqliteTest.m; sourceTree = "<group>"; };
 		EB231F4A10924F2A009087CD /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		EB953B891093088C0037F4B8 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README; path = ../README; sourceTree = SOURCE_ROOT; };
 		EB953C2A109626580037F4B8 /* ObjSqliteDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjSqliteDB.m; sourceTree = "<group>"; };
 		EB953C2B109626580037F4B8 /* ObjSqliteStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjSqliteStatement.m; sourceTree = "<group>"; };
 		EB953C2E1096265E0037F4B8 /* ObjSqliteDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjSqliteDB.h; path = ObjSqlite/ObjSqliteDB.h; sourceTree = "<group>"; };
 		EB953C2F1096265E0037F4B8 /* ObjSqliteStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ObjSqliteStatement.h; path = ObjSqlite/ObjSqliteStatement.h; sourceTree = "<group>"; };
+		EBE731E810A894E400E43DD0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = SOURCE_ROOT; };
+		EBE731EA10A8950B00E43DD0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,8 @@
 		0867D691FE84028FC02AAC07 /* ObjSqlite */ = {
 			isa = PBXGroup;
 			children = (
-				EB953B891093088C0037F4B8 /* README */,
+				EBE731EA10A8950B00E43DD0 /* LICENSE */,
+				EBE731E810A894E400E43DD0 /* README.md */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				EB231F3810924EAA009087CD /* Tests */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -191,7 +194,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB953B8A1093088C0037F4B8 /* README in Resources */,
+				EBE731E910A894E400E43DD0 /* README.md in Resources */,
+				EBE731EB10A8950B00E43DD0 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

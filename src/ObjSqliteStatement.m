@@ -26,7 +26,7 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-- (id)initWithSQL:(const char*)sql andDB:(ObjSqliteDB*)db {
+- (id)initWithSQL:(const char*)sql db:(ObjSqliteDB*)db {
   if (self = [super init]) {
     _db = db;
     _sql = sql;

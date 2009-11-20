@@ -46,3 +46,4 @@ The ObjSqlite includes a unit testing target to ensure that nothing breaks if th
 with. To run the unit tests, simply set your build target to ObjSqliteTest and build the project.
 The simple act of building the project will run the unit tests. If there are any errors, they
 will appear in the same way that build errors do.
+

@@ -1,0 +1,8 @@
+
+Changes for November 19, 2009
+
+- [FIXED] Closing a database, removing it, and then attempting to recreate it with the same db
+          object it would fail due to the create statement being deallocated.
+
+- [TEST] Added testCloseDbWithInsertStatement to handle the above fix.
+

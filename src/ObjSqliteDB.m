@@ -66,6 +66,16 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+- (ObjSqliteStatement*)createStatement {
+  if (nil == _createStatement && nil != _createSQL) {
+    _createStatement = [[ObjSqliteStatement alloc] initWithSQL:_createSQL db:self];
+  }
+
+  return _createStatement;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
 - (sqlite3*)sqliteDB {
   if (nil == _db && nil != _path) {
     // We need to check the existence of the db before sqlite3_open creates it.
@@ -74,9 +84,9 @@
     if (SQLITE_OK == sqlite3_open([_path UTF8String], &_db)) {
       // DB's been opened, now create the tables if necessary.
 
-      if (needsCreation && nil != _createStatement) {
-        if ([_createStatement step]) {
-          [_createStatement resetStatement];
+      if (needsCreation && nil != self.createStatement) {
+        if ([self.createStatement step]) {
+          [self.createStatement resetStatement];
 
         } else {
           sqlite3_close(_db);
@@ -93,13 +103,15 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)setCreateSQL:(const char*)sql {
   [_createStatement release];
-  _createStatement = [[ObjSqliteStatement alloc] initWithSQL:sql db:self];
+  _createStatement = nil;
+
+  _createSQL = sql;
 }
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (const char*)createSQL {
-  return _createStatement.sql;
+  return _createSQL;
 }
 
 

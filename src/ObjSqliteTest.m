@@ -102,6 +102,28 @@ static const char* kTestSelectValueDB = "SELECT value FROM test WHERE id = ?;";
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)testCloseDbWithInsertStatement {
+  ObjSqliteDB* db = [[ObjSqliteDB alloc] initWithPath:kTestDBPath];
+  db.createSQL = kTestCreateDB;
+
+  ObjSqliteStatement* statement;
+
+  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestInsertDB db:db];
+  STAssertTrue([statement step], @"Failed statement: %@", db.lastErrorMessage);
+  [statement release];
+  statement = nil;
+
+  [db close];
+  [[NSFileManager defaultManager] removeItemAtPath:kTestDBPath error:nil];
+
+  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestInsertDB db:db];
+  STAssertTrue([statement step], @"Failed statement: %@", db.lastErrorMessage);
+  [statement release];
+  statement = nil;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)testLoadNewDbWithInsertValueStatement {
   ObjSqliteDB* db = [[ObjSqliteDB alloc] initWithPath:kTestDBPath];
   db.createSQL = kTestCreateDB;

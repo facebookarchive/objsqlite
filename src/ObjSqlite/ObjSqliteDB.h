@@ -26,6 +26,7 @@
 
   NSString* _path;
 
+  const char*         _createSQL;
   ObjSqliteStatement* _createStatement;
 }
 

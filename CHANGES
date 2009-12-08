@@ -3,6 +3,9 @@ Changes for December 8, 2009
 
 - [NEW] -[ObjSqliteDB dbExists] Return TRUE if the database file exists.
 
+- [UPDATE] - Thread safety for statements and db objects. You can now use statements
+             across multiple threads.
+
 Changes for November 19, 2009
 
 - [FIXED] Closing a database, removing it, and then attempting to recreate it with the same db

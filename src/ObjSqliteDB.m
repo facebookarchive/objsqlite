@@ -33,9 +33,11 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)dealloc {
-  [_path release];
-  _path = nil;
-  [self close];
+  @synchronized(self) {
+    [_path release];
+    _path = nil;
+    [self close];
+  }
 
   [super dealloc];
 }
@@ -43,12 +45,14 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)close {
-  [_createStatement release];
-  _createStatement = nil;
+  @synchronized(self) {
+    [_createStatement release];
+    _createStatement = nil;
 
-  if (nil != _db) {
-    sqlite3_close(_db);
-    _db = nil;
+    if (nil != _db) {
+      sqlite3_close(_db);
+      _db = nil;
+    }
   }
 }
 
@@ -73,8 +77,10 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (ObjSqliteStatement*)createStatement {
-  if (nil == _createStatement && nil != _createSQL) {
-    _createStatement = [[ObjSqliteStatement alloc] initWithSQL:_createSQL db:self];
+  @synchronized(self) {
+    if (nil == _createStatement && nil != _createSQL) {
+      _createStatement = [[ObjSqliteStatement alloc] initWithSQL:_createSQL db:self];
+    }
   }
 
   return _createStatement;
@@ -83,20 +89,22 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (sqlite3*)sqliteDB {
-  if (nil == _db && nil != _path) {
-    // We need to check the existence of the db before sqlite3_open creates it.
-    BOOL needsCreation = ![[NSFileManager defaultManager] fileExistsAtPath:_path];
+  @synchronized(self) {
+    if (nil == _db && nil != _path) {
+      // We need to check the existence of the db before sqlite3_open creates it.
+      BOOL needsCreation = ![self dbExists];
 
-    if (SQLITE_OK == sqlite3_open([_path UTF8String], &_db)) {
-      // DB's been opened, now create the tables if necessary.
+      if (SQLITE_OK == sqlite3_open([_path UTF8String], &_db)) {
+        // DB's been opened, now create the tables if necessary.
 
-      if (needsCreation && nil != self.createStatement) {
-        if ([self.createStatement step]) {
-          [self.createStatement resetStatement];
+        if (needsCreation && nil != self.createStatement) {
+          if ([self.createStatement step]) {
+            [self.createStatement resetStatement];
 
-        } else {
-          sqlite3_close(_db);
-          _db = nil;
+          } else {
+            sqlite3_close(_db);
+            _db = nil;
+          }
         }
       }
     }
@@ -108,10 +116,12 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)setCreateSQL:(const char*)sql {
-  [_createStatement release];
-  _createStatement = nil;
+  @synchronized(self) {
+    [_createStatement release];
+    _createStatement = nil;
 
-  _createSQL = sql;
+    _createSQL = sql;
+  }
 }
 
 

@@ -1,4 +1,8 @@
 
+Changes for December 8, 2009
+
+- [NEW] -[ObjSqliteDB dbExists] Return TRUE if the database file exists.
+
 Changes for November 19, 2009
 
 - [FIXED] Closing a database, removing it, and then attempting to recreate it with the same db

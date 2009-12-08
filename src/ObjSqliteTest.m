@@ -57,10 +57,12 @@ static const char* kTestSelectValueDB = "SELECT value FROM test WHERE id = ?;";
   ObjSqliteDB* db = [[ObjSqliteDB alloc] initWithPath:kTestDBPath];
   STAssertNotNil(db, @"The db failed to initialize.");
 
+  // This will create the sql db on the disc.
   sqlite3* ObjSqliteDB = db.sqliteDB;
 
   STAssertTrue(nil != ObjSqliteDB, @"The db failed to be created.");
   STAssertTrue([[NSFileManager defaultManager] fileExistsAtPath:kTestDBPath], @"The db doesn't exist");
+  STAssertTrue([db dbExists], @"The db file doesn't exist.");
 
   [db release];
   db = nil;

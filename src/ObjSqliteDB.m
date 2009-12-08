@@ -66,6 +66,12 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
+- (BOOL)dbExists {
+  return [[NSFileManager defaultManager] fileExistsAtPath:_path];
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
 - (ObjSqliteStatement*)createStatement {
   if (nil == _createStatement && nil != _createSQL) {
     _createStatement = [[ObjSqliteStatement alloc] initWithSQL:_createSQL db:self];

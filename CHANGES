@@ -1,4 +1,14 @@
 
+Changes for December 16, 2009
+
+- [NEW] -[ObjSqliteStatement executeStatement] Allows you to execute multiple SQL statements from
+         one SQL query.
+
+- [RENAMED] Original executeStatement method now has different functionality. The original method
+            can be called with stepAndResetStatement.
+            -[ObjSqliteStatement executeStatement] renamed to
+            -[ObjSqliteStatement stepAndResetStatement]
+
 Changes for December 8, 2009
 
 - [NEW] -[ObjSqliteDB dbExists] Return TRUE if the database file exists.

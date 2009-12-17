@@ -196,5 +196,49 @@ static const char* kTestSelectValueDB = "SELECT value FROM test WHERE id = ?;";
 }
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)testLoadNewDbWithDeleteStepAndResetStatement {
+  ObjSqliteDB* db = [[ObjSqliteDB alloc] initWithPath:kTestDBPath];
+  db.createSQL = kTestCreateDB;
+
+  ObjSqliteStatement* statement;
+
+  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestInsertDB db:db];
+  STAssertTrue([statement stepAndResetStatement], @"Failed statement: %@", db.lastErrorMessage);
+  [statement release];
+  statement = nil;
+
+  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestDeleteDB db:db];
+  STAssertTrue([statement stepAndResetStatement], @"Failed statement: %@", db.lastErrorMessage);
+  [statement release];
+  statement = nil;
+
+  [db release];
+  db = nil;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)testLoadNewDbWithDeleteExecuteStatement {
+  ObjSqliteDB* db = [[ObjSqliteDB alloc] initWithPath:kTestDBPath];
+  db.createSQL = kTestCreateDB;
+
+  ObjSqliteStatement* statement;
+
+  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestInsertDB db:db];
+  STAssertTrue([statement executeStatement], @"Failed statement: %@", db.lastErrorMessage);
+  [statement release];
+  statement = nil;
+
+  statement = [[ObjSqliteStatement alloc] initWithSQL:kTestDeleteDB db:db];
+  STAssertTrue([statement executeStatement], @"Failed statement: %@", db.lastErrorMessage);
+  [statement release];
+  statement = nil;
+
+  [db release];
+  db = nil;
+}
+
+
 
 @end

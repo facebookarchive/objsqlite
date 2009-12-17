@@ -65,7 +65,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString*)lastErrorMessage {
-  return [NSString stringWithCString:sqlite3_errmsg(_db)];
+  return [NSString stringWithCString:sqlite3_errmsg(_db) encoding:NSUTF8StringEncoding];
 }
 
 
@@ -98,10 +98,7 @@
         // DB's been opened, now create the tables if necessary.
 
         if (needsCreation && nil != self.createStatement) {
-          if ([self.createStatement step]) {
-            [self.createStatement resetStatement];
-
-          } else {
+          if (![self.createStatement executeStatement]) {
             sqlite3_close(_db);
             _db = nil;
           }

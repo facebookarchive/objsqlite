@@ -46,6 +46,11 @@
 - (BOOL) bindNullToColumn:(int)column;
 
 
+// Execution
+
+- (BOOL)executeStatement;
+
+
 // Stepping
 
 // @returns true if the step succeeded.
@@ -57,7 +62,7 @@
 - (void) resetStatement;
 
 // Step and reset
-- (BOOL) executeStatement;
+- (BOOL) stepAndResetStatement;
 
 - (void) finalizeStatement;
 

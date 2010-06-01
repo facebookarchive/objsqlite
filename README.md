@@ -36,7 +36,7 @@ ObjSqlite is compiled as a static library.  Here is how to add it to your projec
    "Project Settings" and go to the "Build" tab. Look for "Header Search Paths" and double-click
    it.  Add the relative path from your project's directory to the "ObjSqlite/src" directory.
 
-7. You're ready to go.  Just #import <ObjSqlite/ObjSqlite.h> anywhere you want to use ObjSqlite
+7. You're ready to go.  Just #import <ObjSqlite/ObjSqliteDB.h> anywhere you want to use ObjSqlite
    classes in your project.
 
 Testing ObjSqlite

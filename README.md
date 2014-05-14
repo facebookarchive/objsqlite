@@ -8,7 +8,7 @@ Archived Repo
 ObjSqlite
 =========
 
-Objective Sqlite is a leightweight Objective-C wrapper for sqlite. It provides a number of
+Objective Sqlite is a lightweight Objective-C wrapper for sqlite. It provides a number of
 convenience functions for binding and retrieving data from sqlite results.
 
 Adding ObjSqlite to your project
